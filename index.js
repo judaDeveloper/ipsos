@@ -80,9 +80,9 @@ inputs.forEach((nput) => {
     newdetails();
   });
 });
+  let userform = document.querySelector("#userform");
 function submitform() {
   let data = JSON.parse(sessionStorage.getItem("tanarivers"));
-  let userform = document.querySelector("#userform");
   db.collection("tanarivers")
     .add(data)
     .then((docRef) => {
@@ -91,4 +91,4 @@ function submitform() {
       userform.reset();
     });
 }
-  
+userform.reset();
