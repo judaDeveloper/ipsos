@@ -66,8 +66,6 @@
   .main:has(#userform.submited) .submited  {
     display: grid;
   }
-
-
   .lbl {
     width: 100%;
     display: grid;
@@ -83,7 +81,6 @@
   .lbx {
     color: #000000;
   }
-
   .content {
     width: 100%;
     display: grid;
@@ -95,7 +92,7 @@
     font-size: 15px;
     align-content: center;
   }
-  .lbl .nput {
+  .nput {
     width: 100%;
     height: 45px;
     font-size: 16px;
@@ -105,8 +102,7 @@
     border: 1px solid #cfcfcf34;
     background-color:  #f0f0f0;
   }
-
-  .lbl .nput:focus {
+  .nput:focus {
     border: 1px solid #008cff;
     background-color:  #ffffff
   }
@@ -115,14 +111,12 @@
     background-color:  #008cff10;
     font-weight: bold;
   }
-
-  .lbl:has(.nput.invalid)
-  .content {
+  .lbl:has(.invalid) .content {
     color: #ff1414;
     background-color:  #ffaeae13
   }
 
-  .lbl .nput.invalid {
+  .invalid {
     border: 1px solid #ffa4a4;
     background-color:  #ffaeae13
   }
@@ -133,7 +127,7 @@
     margin: 10% auto;
     grid-template-columns: 1fr minmax(80px, 140px);
   }
-  .submit button {
+  button {
     width: 100%;
     height: 45px;
     cursor: pointer;
@@ -145,11 +139,11 @@
     background-color: #23a7ff;
   }
 
-  .submit button:hover {
+  button:hover {
     font-weight: 700;
     background-color: #008cff;
   }
-  .submit:has(button.invalid):focus-within button.invalid {
+  .submit:has(.invalid):focus-within button.invalid {
     color: #ff1414;
     background-color: #ffececa4;
     border: 1px solid #ff1414;
