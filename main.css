@@ -1,0 +1,155 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: 13px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    -moz-box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    -webkit-box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+  
+  html,
+  body {
+    margin: 0;
+    height: 100vh;
+    height: 100dvh;
+    display: grid; 
+  }
+  h1 {
+    font-size: 20px;
+    color: #2c2c2c;
+    margin-bottom: 10%;
+  }
+  
+  .main {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    padding-top: 20px;
+    background-color: #185688;
+  }
+  .submited {
+    padding: 10%;
+    display: none;
+    margin: 0 auto;
+    border-radius: 8px;
+    justify-content: center;
+    background-color: #f0f0f021;
+  }
+  .submited h3 {
+    font-size: 20px;
+    margin-top: 10px;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  #userform {
+    margin: 10px auto;
+    min-height: 400px;
+    width: fit-content;
+    border-radius: 3px;
+    height: fit-content;
+    padding: 4% 5% 10px 5%;
+    min-width: 320px;
+    background-color: #f8f8f8;
+  }
+  .main:has(#userform.submited) #userform  {
+    display: none;
+  }
+  .main:has(#userform.submited) .submited  {
+    display: grid;
+  }
+
+
+
+  .lbl {
+    width: 100%;
+    display: grid;
+    margin: 0px auto;
+    column-gap: 2px;
+    min-width: 280px;
+    max-width: 320px;
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    grid-template-rows: 20px 1fr;
+  }
+  .lbx {
+    color: #000000;
+  }
+
+  .content {
+    width: 100%;
+    display: grid;
+    row-gap: 10%;
+    padding: 0px 0px 5px 20px;
+    grid-template-rows: 25px 25px;
+  }
+  .content label {
+    font-size: 15px;
+    align-content: center;
+  }
+  .nput {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    min-width: 300px;
+    border-radius: 3px;
+    padding: 5px 5px 5px 20px;
+    border: 1px solid #cfcfcf34;
+    background-color:  #f0f0f0;
+  }
+
+  .nput.invalid {
+    border: 1px solid #ffa4a4;
+    background-color:  #ffaeae13
+  }
+  .nput:focus {
+    border: 1px solid #008cff;
+    background-color:  #ffffff
+  }
+  .nput:not(.nput:placeholder-shown):not(:focus):not(:invalid) {
+    border: 1px solid #008cff1a;
+    background-color:  #008cff10;
+    font-weight: bold;
+  }
+
+  .lbl:has(.nput.invalid)
+  .content {
+    color: #ff1414;
+    background-color:  #ffaeae13
+  }
+
+  .submit {
+    width: 100%;
+    display: grid;
+    margin: 10% auto;
+    grid-template-columns: 1fr minmax(80px, 140px);
+  }
+  .submit button {
+    width: 100%;
+    height: 45px;
+    cursor: pointer;
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 4px;
+    background-color: #23a7ff;
+  }
+
+  .submit button:hover {
+    font-weight: 700;
+    background-color: #008cff;
+  }
+  .submit:has(button.invalid):focus-within button.invalid {
+    color: #ff1414;
+    background-color: #ffececa4;
+    border: 1px solid #ff1414;
+  }
+  
